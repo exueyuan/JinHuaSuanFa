@@ -9,17 +9,21 @@ import java.util.Random;
  */
 
 public class QunTiList {
-    public static final int GETI_NUM = 1000;
-    public static final int SAIXUAN_NUM = GETI_NUM / 2;
-    public static final int JIAOCHA_NUM = GETI_NUM / 2;
-    public static final int BIANYI_NUM = GETI_NUM / 100;
+    public int geTiNum = 1000;
+    public int saiXuanNum = geTiNum / 2;
+    public int jiaoChaNum = geTiNum / 2;
+    public int bianYiNum = geTiNum / 2;
 
     public List<GeTi> geTiList = new ArrayList<>();
     public List<GeTi> saixuanGeTiList = new ArrayList<>();
 
 
-    public void init() {
-        for (int i = 0; i < GETI_NUM; i++) {
+    public void init(int getiNum) {
+        this.geTiNum = getiNum;
+        this.saiXuanNum = geTiNum / 2;
+        this.jiaoChaNum = geTiNum / 2;
+        this.bianYiNum = geTiNum / 2;
+        for (int i = 0; i < getiNum; i++) {
             GeTi geTi = new GeTi();
             geTi.init();
             geTiList.add(geTi);
@@ -27,7 +31,7 @@ public class QunTiList {
     }
 
     public void xunhuanbianyi() {
-        for (int i = 0; i < BIANYI_NUM; i++) {
+        for (int i = 0; i < bianYiNum; i++) {
             bianyi();
         }
     }
@@ -40,7 +44,7 @@ public class QunTiList {
     }
 
     public void xunhuanjiaocha() {
-        for (int i = 0; i < JIAOCHA_NUM; i++) {
+        for (int i = 0; i < jiaoChaNum; i++) {
             jiaoCha();
         }
         saixuanGeTiList.clear();
@@ -65,7 +69,7 @@ public class QunTiList {
     }
 
     public void xunhuansaixuan() {
-        for (int i = 0; i < SAIXUAN_NUM; i++) {
+        for (int i = 0; i < saiXuanNum; i++) {
             saixuanGeTiList.add(saixuan2());
         }
         geTiList.clear();

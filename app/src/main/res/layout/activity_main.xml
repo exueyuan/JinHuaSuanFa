@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.duyi.myjinhuasuanfa.MainActivity">
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/et_zifuchuan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="test demo demo"
         android:hint="这里输入要进化的字符串，自能输入英文" />
 
     <LinearLayout
@@ -62,6 +61,63 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="种群个数：" />
+
+        <RadioGroup
+            android:id="@+id/rg_zhongqun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_zhongqun_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10" />
+
+            <RadioButton
+                android:id="@+id/rb_zhongqun_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50" />
+
+            <RadioButton
+                android:id="@+id/rb_zhongqun_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100" />
+
+            <RadioButton
+                android:id="@+id/rb_zhongqun_500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000" />
+
+            <RadioButton
+                android:id="@+id/rb_zhongqun_1000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进化代数:0,目标匹配度:0" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,14 +136,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="停止进化" />
-
-        <Button
-            android:id="@+id/bt_start"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="继续进化"
-            android:visibility="gone" />
     </LinearLayout>
 
     <ScrollView
