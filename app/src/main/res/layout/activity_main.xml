@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.duyi.myjinhuasuanfa.MainActivity">
+
+    <EditText
+        android:id="@+id/et_zifuchuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="这里输入要进化的字符串，自能输入英文" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进化代数：" />
+
+        <RadioGroup
+            android:id="@+id/rg_daishu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50" />
+
+            <RadioButton
+                android:id="@+id/rb_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100" />
+
+            <RadioButton
+                android:id="@+id/rb_500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500" />
+
+            <RadioButton
+                android:id="@+id/rb_1000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000" />
+
+            <RadioButton
+                android:id="@+id/rb_2000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2000" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_jinhua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始进化" />
+
+        <Button
+            android:id="@+id/bt_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="停止进化" />
+
+        <Button
+            android:id="@+id/bt_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="继续进化"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
+
+</LinearLayout>
